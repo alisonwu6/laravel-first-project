@@ -7,15 +7,14 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index() {
-        $title = "Welcome to Laravel Course!!!";
-        $description = "Created by Alison";
+        // $title = "Welcome to Laravel Course!!!";
+        // $description = "Created by Alison";
 
-        $data = [
-            'productOne' => "iPhone",
-            'productTwo' => "Samsung",
-        ];
-        
-        
+        // $data = [
+        //     'productOne' => "iPhone",
+        //     'productTwo' => "Samsung",
+        // ];
+
         // * compact method
         // return view('products.index', compact('title', 'description'));
 
@@ -24,10 +23,8 @@ class ProductsController extends Controller
         // return view('products.index')->with('data', $data);
 
         // * directly to the view
-        return view('products.index', [
-            'data' => $data,
-            'title' => $title 
-        ]);
+        print_r(route('products'));
+        return view('products.index');
     }
     public  function show($id) {
         $data = [

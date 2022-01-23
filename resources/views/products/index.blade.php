@@ -8,6 +8,6 @@
 </head>
 <body>
   <h1>Product</h1>
-  <p> {{ $products }} </p>
+  <a href="{{ route('products') }}">Products</a>
 </body>
 </html>
