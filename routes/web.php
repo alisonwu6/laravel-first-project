@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,19 +15,5 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
-// Laravel 8 (New)
-// comment out `use App\Http\Controllers\ProductsController;`
-Route::get('/products',[ProductsController::class, 'index'])->name('products');
-// Route::get('products/about', [ProductsController::class, 'about']);
-
-// endpoint pattern Integer
-// Route::get('products/{id}',[ProductsController::class, 'show'])->where('id', '[0-9]+');
-
-// endpoint pattern String
-// Route::get('products/{name}',[ProductsController::class, 'show'])->where(['name', '[a-zA-Z]+']);
-
-// endpoint pattern products/{name}/{id}
-// Route::get('products/{name}/{id}',[ProductsController::class, 'show'])->where(['name', '[a-z]+', 'id', '[0-9]+']);
-
-// Laravel 8 (Also New)
-// Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+Route::get('/',[PagesController::class, 'index']);
+Route::get('/about',[PagesController::class, 'about']);
