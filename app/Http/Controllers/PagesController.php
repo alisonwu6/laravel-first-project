@@ -10,6 +10,7 @@ class PagesController extends Controller
         return view('index');
     }
     public function about() {
-        return view('about');
+        $name = 'John';
+        return view('about')->with('name',$name);
     }
 }
