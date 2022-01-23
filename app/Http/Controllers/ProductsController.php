@@ -29,6 +29,16 @@ class ProductsController extends Controller
             'title' => $title 
         ]);
     }
+    public  function show($id) {
+        $data = [
+            'iPhone' => "iPhone",
+            'samsung' => "samsung",
+        ];
+
+        return view('products.index', [
+            'products' => $data[$id] ?? 'Product ' . $id .' does not exit.'
+        ]);
+    }
     public function about() {
         return 'products.about';
     }
